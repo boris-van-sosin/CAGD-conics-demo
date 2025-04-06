@@ -146,17 +146,6 @@ public class ConicDisplay : MonoBehaviour
         _innerConic.ExtraPoint = new Vector2(ExtraPoint.position.x, ExtraPoint.position.z);
          _innerConic.Recompute();
 
-        /*
-        for (int ii = 0; ii < _longPosBuffer.Length; ++ii)
-        {
-            //float tt = (float)(ii) / (float)(_longPosBuffer.Length - 1) * (ConicSection.MaxT - ConicSection.MinT) * 0.5f + ConicSection.MinT + (ConicSection.MaxT - ConicSection.MinT) * 0.25f;
-            float tt = (float)(ii) / (float)(_longPosBuffer.Length - 1) * (ConicSection.MaxT - ConicSection.MinT) + ConicSection.MinT;
-            Vector2 pnt = _innerConic.Evaluate(tt);
-
-            _longPosBuffer[ii] = new Vector3(pnt.x, 0f, pnt.y);
-        }
-        */
-
         float step = 0.1f;
 
         for (int ii = 0; ii < _longPosBuffer.Length; ++ii)
